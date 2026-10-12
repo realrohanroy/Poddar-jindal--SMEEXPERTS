@@ -117,9 +117,7 @@ export default function Navbar() {
 
       {/* ── FEATURE STRIP ── */}
       <div
-        className={`fixed left-0 right-0 z-40 bg-[#F4EAC8] transition-all duration-400 hidden lg:block ${
-          scrolled ? 'top-[71px]' : 'top-[89px]'
-        }`}
+        className="absolute top-[89px] left-0 right-0 z-30 bg-[#F4EAC8] hidden lg:block"
       >
         <div className="max-w-[1500px] mx-auto px-6 py-3 flex items-center justify-between w-full">
           <div className="flex items-center justify-between flex-1 pr-[8%] lg:pr-[12%]">

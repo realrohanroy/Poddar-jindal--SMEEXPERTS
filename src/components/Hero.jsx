@@ -84,9 +84,7 @@ export default function Hero() {
     <section
       id="home"
       ref={heroRef}
-      className="relative min-h-[100dvh] flex flex-col overflow-hidden bg-[#FDFBF7]"
-      /* Push below fixed navbar (nav 89px + feature strip 42px = 131px) */
-      style={{ paddingTop: '131px' }}
+      className="relative min-h-[100dvh] flex flex-col overflow-hidden bg-[#FDFBF7] pt-16 md:pt-[89px] lg:pt-[131px]"
     >
       {/* ── FULL-BLEED BACKGROUND IMAGE ── */}
       <div
@@ -118,14 +116,14 @@ export default function Hero() {
       <div className="relative z-10 flex flex-col flex-1 max-w-[1400px] mx-auto w-full px-6 md:px-12 lg:px-16">
 
         {/* Main hero layout */}
-        <div className="flex-1 flex items-start md:items-center pt-8 md:pt-10 pb-6">
+        <div className="flex-1 flex items-start md:items-center pt-2 sm:pt-4 md:pt-10 pb-6">
           {/* Left text block - shifted slightly right to sit perfectly centered in the organic background blob */}
           <div className="w-full max-w-[520px] ml-[2%] md:ml-[5%] lg:ml-[8%]">
 
             {/* Eyebrow */}
             <div
               ref={eyebrowRef}
-              className="flex items-center gap-3 mb-8 opacity-0"
+              className="flex items-center gap-3 mb-4 md:mb-8 opacity-0"
             >
               <span className="text-[11px] font-mono tracking-[0.22em] uppercase text-[#1a4a2e] font-semibold">
                 FROM FIELD TO FAMILY
@@ -134,7 +132,7 @@ export default function Hero() {
             </div>
 
             {/* H1 — large serif, two lines */}
-            <h1 className="font-display font-black leading-[1.05] mb-6">
+            <h1 className="font-display font-black leading-[1.05] mb-4 md:mb-6">
               <span className="hero-line block text-[3.6rem] md:text-[4.5rem] lg:text-[5rem] text-[#1a4a2e] opacity-0">
                 A little seed.
               </span>
@@ -146,13 +144,13 @@ export default function Hero() {
             {/* Sub */}
             <p
               ref={subRef}
-              className="text-[#1a1a18]/65 text-base md:text-lg leading-relaxed mb-8 max-w-[400px] opacity-0"
+              className="text-[#1a1a18]/65 text-base md:text-lg leading-relaxed mb-6 md:mb-8 max-w-[400px] opacity-0"
             >
               Discover the journey behind Poddar-Jindal mustard oil — from sunlit fields to the flavour at home.
             </p>
 
             {/* CTAs */}
-            <div ref={ctaRef} className="flex flex-wrap items-center gap-3 mb-10 opacity-0">
+            <div ref={ctaRef} className="flex flex-wrap items-center gap-3 mb-6 md:mb-10 opacity-0">
               <a
                 href="#product"
                 className="inline-flex items-center gap-2.5 bg-[#C8102E] text-white font-semibold text-sm px-7 py-3.5 rounded-sm hover:bg-[#a80d26] hover:gap-3.5 transition-all duration-300 group"

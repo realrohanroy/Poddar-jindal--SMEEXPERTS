@@ -35,33 +35,57 @@ export default function App() {
     }
   }, [])
 
-  // Custom cursor (desktop only)
+  // Custom cursor (desktop with fine pointer only)
   useEffect(() => {
+    // Completely disable on mobile and touch devices
+    if (window.innerWidth <= 1024 || window.matchMedia('(pointer: coarse)').matches) {
+      return
+    }
+
     const dot = document.createElement('div')
     const ring = document.createElement('div')
     dot.className = 'cursor-dot'
     ring.className = 'cursor-ring'
     document.body.appendChild(dot)
     document.body.appendChild(ring)
-    let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0
+
+    let mouseX = -100, mouseY = -100, ringX = -100, ringY = -100
+    let animId
+
     const onMove = (e) => {
-      mouseX = e.clientX; mouseY = e.clientY
+      mouseX = e.clientX
+      mouseY = e.clientY
       dot.style.left = mouseX - 4 + 'px'
       dot.style.top = mouseY - 4 + 'px'
     }
+
     const animate = () => {
       ringX += (mouseX - ringX) * 0.12
       ringY += (mouseY - ringY) * 0.12
       ring.style.left = ringX - 16 + 'px'
       ring.style.top = ringY - 16 + 'px'
-      requestAnimationFrame(animate)
+      animId = requestAnimationFrame(animate)
     }
-    if (window.innerWidth > 1024) {
-      window.addEventListener('mousemove', onMove)
-      animate()
+
+    const onResize = () => {
+      const isMobile = window.innerWidth <= 1024 || window.matchMedia('(pointer: coarse)').matches
+      if (isMobile) {
+        dot.style.display = 'none'
+        ring.style.display = 'none'
+      } else {
+        dot.style.display = 'block'
+        ring.style.display = 'block'
+      }
     }
+
+    window.addEventListener('mousemove', onMove)
+    window.addEventListener('resize', onResize)
+    animId = requestAnimationFrame(animate)
+
     return () => {
       window.removeEventListener('mousemove', onMove)
+      window.removeEventListener('resize', onResize)
+      if (animId) cancelAnimationFrame(animId)
       dot.remove()
       ring.remove()
     }

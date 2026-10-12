@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { storyStages } from '../data/content'
@@ -8,7 +8,6 @@ gsap.registerPlugin(ScrollTrigger)
 export default function StoryJourney() {
   const sectionRef = useRef(null)
   const trackRef = useRef(null)
-  const [activeStage, setActiveStage] = useState(0)
 
   useEffect(() => {
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -29,16 +28,9 @@ export default function StoryJourney() {
       if (prefersReduced) return
 
       // Each stage card reveal
-      storyStages.forEach((stage, i) => {
+      storyStages.forEach((stage) => {
         const card = document.querySelector(`#stage-${stage.id}`)
         if (!card) return
-
-        ScrollTrigger.create({
-          trigger: card,
-          start: 'top 60%',
-          onEnter: () => setActiveStage(i),
-          onEnterBack: () => setActiveStage(i),
-        })
 
         // Image parallax inside card
         const img = card.querySelector('.stage-img')
@@ -92,32 +84,6 @@ export default function StoryJourney() {
           Every drop begins with something small — a carefully selected mustard seed.
           Follow its journey from India's fields to the oil in your kitchen.
         </p>
-        {/* Journey line */}
-        <div className="mt-12 flex items-center justify-center gap-0">
-          {storyStages.map((stage, i) => (
-            <div key={stage.id} className="flex items-center">
-              <div className={`flex flex-col items-center gap-1 transition-all duration-500 ${
-                activeStage >= i ? 'opacity-100' : 'opacity-30'
-              }`}>
-                <div className={`w-3 h-3 rounded-full border-2 transition-all duration-500 ${
-                  activeStage === i
-                    ? 'bg-pj-red border-pj-red scale-150'
-                    : activeStage > i
-                    ? 'bg-pj-gold border-pj-gold'
-                    : 'border-pj-brown/30 bg-transparent'
-                }`} />
-                <span className="hidden md:block text-[10px] font-mono text-pj-brown/60 uppercase tracking-wider mt-1">
-                  {stage.label}
-                </span>
-              </div>
-              {i < storyStages.length - 1 && (
-                <div className={`w-12 md:w-20 h-px transition-all duration-700 mx-1 ${
-                  activeStage > i ? 'bg-pj-gold' : 'bg-pj-brown/20'
-                }`} />
-              )}
-            </div>
-          ))}
-        </div>
       </div>
 
       {/* Stage cards */}
