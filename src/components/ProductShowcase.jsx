@@ -85,10 +85,10 @@ export default function ProductShowcase() {
               <h2 className="product-header font-display font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-pj-charcoal leading-tight">
                 Our Product Range
               </h2>
-              <p className="product-header text-pj-brown/85 text-xs sm:text-sm lg:text-base mt-2 md:mt-4 mb-4 md:mb-6 leading-relaxed">
+              <p className="product-header hidden md:block text-pj-brown/85 text-xs sm:text-sm lg:text-base mt-2 md:mt-4 mb-4 md:mb-6 leading-relaxed">
                 One mustard oil. Made for every kitchen. Poddar Jindal Mustard Oil is available in multiple pack sizes to suit your home and business needs.
               </p>
-              <div className="product-header flex flex-wrap items-center gap-2.5">
+              <div className="product-header hidden md:flex flex-wrap items-center gap-2.5">
                 <a
                   href="#pack-explorer"
                   className="inline-flex items-center justify-center gap-2 bg-[#C61A22] text-white font-semibold text-xs md:text-sm px-4 py-2 md:px-6 md:py-2.5 rounded-sm hover:bg-[#a5151c] transition-colors duration-300 shadow-md shadow-black/10"
