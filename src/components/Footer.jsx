@@ -77,10 +77,10 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Registered Office & Works (3 cols) */}
+          {/* Registered Office & Mill (3 cols) */}
           <div className="lg:col-span-3 space-y-5">
             <p className="footer-el text-pj-gold text-xs font-mono tracking-widest uppercase font-semibold">
-              OFFICES & WORKS
+              OFFICES & MILL
             </p>
 
             <div className="footer-el">
@@ -94,7 +94,7 @@ export default function Footer() {
 
             <div className="footer-el">
               <p className="text-white/40 text-[11px] font-mono uppercase tracking-wider mb-1 font-semibold">
-                Works (Mill & Factory)
+                Mill
               </p>
               <p className="text-white/80 text-xs leading-relaxed">
                 Khasra No.-56, Village- Khera, Tehsil- Nadbai, District- Bharatpur, Rajasthan- 321602, India
@@ -131,20 +131,6 @@ export default function Footer() {
                 className="text-xs text-white/85 hover:text-pj-gold transition-colors break-all font-medium"
               >
                 poddar.jindalagromills@gmail.com
-              </a>
-            </div>
-
-            <div className="footer-el">
-              <p className="text-white/40 text-[11px] font-mono uppercase tracking-wider mb-1 font-semibold">
-                Website
-              </p>
-              <a
-                href="https://www.poddarjindalagromills.in"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs text-white/85 hover:text-pj-gold transition-colors break-all font-medium"
-              >
-                www.poddarjindalagromills.in
               </a>
             </div>
           </div>

@@ -8,8 +8,7 @@ import {
   Clock, 
   CheckCircle, 
   Sparkle, 
-  ChatCircleDots,
-  Globe
+  ChatCircleDots
 } from '@phosphor-icons/react'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -82,13 +81,13 @@ export default function RetailerLocator() {
 
               <div className="h-px bg-[#1a1a18]/10" />
 
-              {/* Works (Factory & Mill) */}
+              {/* Mill */}
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-full bg-[#1a4a2e]/10 text-[#1a4a2e] flex items-center justify-center shrink-0 mt-0.5">
                   <MapPin size={20} weight="duotone" />
                 </div>
                 <div>
-                  <h4 className="font-display font-bold text-sm text-[#1a1a18] mb-0.5">Works (Factory & Mill)</h4>
+                  <h4 className="font-display font-bold text-sm text-[#1a1a18] mb-0.5">Mill</h4>
                   <p className="text-xs text-[#1a1a18]/75 leading-relaxed font-medium">
                     Khasra No.-56, Village- Khera, Tehsil- Nadbai, District- Bharatpur, Rajasthan- 321602, India
                   </p>
@@ -118,30 +117,16 @@ export default function RetailerLocator() {
 
               <div className="h-px bg-[#1a1a18]/10" />
 
-              {/* Email & Website */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-full bg-[#1a4a2e]/10 text-[#1a4a2e] flex items-center justify-center shrink-0 mt-0.5">
-                    <Envelope size={18} weight="duotone" />
-                  </div>
-                  <div>
-                    <h4 className="font-display font-bold text-xs text-[#1a1a18] mb-0.5">E-mail ID</h4>
-                    <a href="mailto:poddar.jindalagromills@gmail.com" className="text-xs text-[#1a1a18]/80 hover:text-[#C61A22] transition-colors break-all font-medium">
-                      poddar.jindalagromills@gmail.com
-                    </a>
-                  </div>
+              {/* E-mail ID */}
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-[#1a4a2e]/10 text-[#1a4a2e] flex items-center justify-center shrink-0 mt-0.5">
+                  <Envelope size={20} weight="duotone" />
                 </div>
-
-                <div className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-full bg-[#1a4a2e]/10 text-[#1a4a2e] flex items-center justify-center shrink-0 mt-0.5">
-                    <Globe size={18} weight="duotone" />
-                  </div>
-                  <div>
-                    <h4 className="font-display font-bold text-xs text-[#1a1a18] mb-0.5">Website</h4>
-                    <a href="https://www.poddarjindalagromills.in" target="_blank" rel="noopener noreferrer" className="text-xs text-[#1a1a18]/80 hover:text-[#C61A22] transition-colors break-all font-medium">
-                      www.poddarjindalagromills.in
-                    </a>
-                  </div>
+                <div>
+                  <h4 className="font-display font-bold text-sm text-[#1a1a18] mb-0.5">E-mail ID</h4>
+                  <a href="mailto:poddar.jindalagromills@gmail.com" className="text-xs text-[#1a1a18]/80 hover:text-[#C61A22] transition-colors break-all font-semibold">
+                    poddar.jindalagromills@gmail.com
+                  </a>
                 </div>
               </div>
 
