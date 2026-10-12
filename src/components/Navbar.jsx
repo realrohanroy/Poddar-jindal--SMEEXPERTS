@@ -75,16 +75,8 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* Right Side — Search + Divider + CTA */}
+          {/* Right Side — CTA */}
           <div className="hidden lg:flex items-center ml-4 shrink-0">
-            <button className="p-2 text-[#1a4a2e] hover:text-[#C59B27] transition-colors" aria-label="Search">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
-              </svg>
-            </button>
-            
-            <div className="w-[1px] h-6 bg-[#1a4a2e]/15 mx-5" />
-            
             <a
               href="#contact"
               className="inline-flex items-center gap-2 bg-[#C61A22] text-white text-[15px] font-semibold px-6 py-2.5 rounded-md hover:bg-[#a5151c] transition-colors"
@@ -94,12 +86,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <div className="flex lg:hidden items-center gap-2 ml-auto">
-            <button className="p-2 text-[#1a4a2e]" aria-label="Search">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
-              </svg>
-            </button>
+          <div className="flex lg:hidden items-center ml-auto">
             <button
               className="p-2 text-[#1a4a2e]"
               onClick={() => setMenuOpen(!menuOpen)}
