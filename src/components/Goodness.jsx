@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { goodness, qualityWorkflow, qualityBadges } from '../data/content'
+import { goodness, qualityWorkflow } from '../data/content'
 import { 
   Sparkle, 
   ShieldCheck, 
@@ -113,22 +113,6 @@ export default function Goodness() {
           <p className="goodness-heading text-white/70 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
             We maintain strict quality standards at every stage — from seed selection to processing and packaging — to ensure purity, safety, and authentic pungent taste.
           </p>
-        </div>
-
-        {/* 4 Quality Badges (Matching Inspiration layout) */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-16">
-          {qualityBadges.map((badge, idx) => (
-            <div
-              key={badge.title}
-              className="bg-white/[0.06] border border-white/10 rounded-xl p-5 md:p-6 text-center hover:bg-white/[0.1] hover:border-[#C59B27]/40 transition-all duration-300"
-            >
-              <div className="w-12 h-12 rounded-full bg-[#C59B27]/15 border border-[#C59B27]/30 flex items-center justify-center text-xl mx-auto mb-3">
-                {badge.icon}
-              </div>
-              <h4 className="font-display font-bold text-sm md:text-base text-white mb-1.5">{badge.title}</h4>
-              <p className="text-white/60 text-xs leading-relaxed">{badge.desc}</p>
-            </div>
-          ))}
         </div>
 
         {/* 4-Step Quality Process Workflow (Seed Cleaning -> Controlled Processing -> Quality Testing -> Safe Packaging) */}
