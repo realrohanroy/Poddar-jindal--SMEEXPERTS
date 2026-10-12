@@ -270,3 +270,18 @@ export const goodness = [
   },
 ]
 
+export const companyInfo = {
+  name: 'Poddar Jindal Agro Mills Private Limited',
+  tagline: 'Pure • Natural • Healthy',
+  regdOffice: '111, GF, Block-B, Pocket-6, Sector-3, Rohini, New Delhi-110085, India',
+  works: 'Khasra No.-56, Village- Khera, Tehsil- Nadbai, District- Bharatpur, Rajasthan- 321602, India',
+  email: 'poddar.jindalagromills@gmail.com',
+  website: 'www.poddarjindalagromills.in',
+  websiteUrl: 'https://www.poddarjindalagromills.in',
+  phones: [
+    { display: '+91-98715-93457', tel: '+919871593457' },
+    { display: '+91-98110-46405', tel: '+919811046405' },
+  ],
+}
+
+

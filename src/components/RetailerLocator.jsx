@@ -8,7 +8,8 @@ import {
   Clock, 
   CheckCircle, 
   Sparkle, 
-  ChatCircleDots
+  ChatCircleDots,
+  Globe
 } from '@phosphor-icons/react'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -64,59 +65,97 @@ export default function RetailerLocator() {
             </div>
 
             {/* Direct Contact Info Details */}
-            <div className="locator-el bg-white p-7 sm:p-9 rounded-2xl border border-[#1a1a18]/10 shadow-xs space-y-6">
+            <div className="locator-el bg-white p-7 sm:p-9 rounded-2xl border border-[#1a1a18]/10 shadow-xs space-y-5">
               
+              {/* Regd. Office */}
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-full bg-[#1a4a2e]/10 text-[#1a4a2e] flex items-center justify-center shrink-0 mt-0.5">
                   <MapPin size={20} weight="duotone" />
                 </div>
                 <div>
-                  <h4 className="font-display font-bold text-sm text-[#1a1a18] mb-0.5">Corporate Office & Mill</h4>
-                  <p className="text-xs text-[#1a1a18]/70 leading-relaxed">
-                    Poddar Jindal Agro Mills Private Limited<br />
-                    Plot No. 12, Industrial Area, New Delhi, India
+                  <h4 className="font-display font-bold text-sm text-[#1a1a18] mb-0.5">Regd. Office</h4>
+                  <p className="text-xs text-[#1a1a18]/75 leading-relaxed font-medium">
+                    111, GF, Block-B, Pocket-6, Sector-3, Rohini, New Delhi-110085, India
                   </p>
                 </div>
               </div>
 
               <div className="h-px bg-[#1a1a18]/10" />
 
+              {/* Works (Factory & Mill) */}
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-[#1a4a2e]/10 text-[#1a4a2e] flex items-center justify-center shrink-0 mt-0.5">
+                  <MapPin size={20} weight="duotone" />
+                </div>
+                <div>
+                  <h4 className="font-display font-bold text-sm text-[#1a1a18] mb-0.5">Works (Factory & Mill)</h4>
+                  <p className="text-xs text-[#1a1a18]/75 leading-relaxed font-medium">
+                    Khasra No.-56, Village- Khera, Tehsil- Nadbai, District- Bharatpur, Rajasthan- 321602, India
+                  </p>
+                </div>
+              </div>
+
+              <div className="h-px bg-[#1a1a18]/10" />
+
+              {/* Mobile Numbers */}
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-full bg-[#1a4a2e]/10 text-[#1a4a2e] flex items-center justify-center shrink-0 mt-0.5">
                   <Phone size={20} weight="duotone" />
                 </div>
                 <div>
-                  <h4 className="font-display font-bold text-sm text-[#1a1a18] mb-0.5">Trade & Customer Hotline</h4>
-                  <p className="text-xs text-[#1a1a18]/70 leading-relaxed">
-                    +91-11-2700 XXXX / +91-98XXX XXXXX
-                  </p>
+                  <h4 className="font-display font-bold text-sm text-[#1a1a18] mb-0.5">Mobile No.</h4>
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-[#1a1a18]/80 font-medium">
+                    <a href="tel:+919871593457" className="hover:text-[#C61A22] transition-colors font-semibold">
+                      +91-98715-93457
+                    </a>
+                    <span className="text-black/30">•</span>
+                    <a href="tel:+919811046405" className="hover:text-[#C61A22] transition-colors font-semibold">
+                      +91-98110-46405
+                    </a>
+                  </div>
                 </div>
               </div>
 
               <div className="h-px bg-[#1a1a18]/10" />
 
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#1a4a2e]/10 text-[#1a4a2e] flex items-center justify-center shrink-0 mt-0.5">
-                  <Envelope size={20} weight="duotone" />
+              {/* Email & Website */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-9 h-9 rounded-full bg-[#1a4a2e]/10 text-[#1a4a2e] flex items-center justify-center shrink-0 mt-0.5">
+                    <Envelope size={18} weight="duotone" />
+                  </div>
+                  <div>
+                    <h4 className="font-display font-bold text-xs text-[#1a1a18] mb-0.5">E-mail ID</h4>
+                    <a href="mailto:poddar.jindalagromills@gmail.com" className="text-xs text-[#1a1a18]/80 hover:text-[#C61A22] transition-colors break-all font-medium">
+                      poddar.jindalagromills@gmail.com
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-display font-bold text-sm text-[#1a1a18] mb-0.5">Email Support</h4>
-                  <p className="text-xs text-[#1a1a18]/70 leading-relaxed">
-                    info@poddarjindal.com / sales@poddarjindal.com
-                  </p>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-9 h-9 rounded-full bg-[#1a4a2e]/10 text-[#1a4a2e] flex items-center justify-center shrink-0 mt-0.5">
+                    <Globe size={18} weight="duotone" />
+                  </div>
+                  <div>
+                    <h4 className="font-display font-bold text-xs text-[#1a1a18] mb-0.5">Website</h4>
+                    <a href="https://www.poddarjindalagromills.in" target="_blank" rel="noopener noreferrer" className="text-xs text-[#1a1a18]/80 hover:text-[#C61A22] transition-colors break-all font-medium">
+                      www.poddarjindalagromills.in
+                    </a>
+                  </div>
                 </div>
               </div>
 
               <div className="h-px bg-[#1a1a18]/10" />
 
+              {/* Working Hours */}
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-full bg-[#1a4a2e]/10 text-[#1a4a2e] flex items-center justify-center shrink-0 mt-0.5">
                   <Clock size={20} weight="duotone" />
                 </div>
                 <div>
                   <h4 className="font-display font-bold text-sm text-[#1a1a18] mb-0.5">Working Hours</h4>
-                  <p className="text-xs text-[#1a1a18]/70 leading-relaxed">
-                    Monday – Saturday: 9:00 AM – 6:00 PM
+                  <p className="text-xs text-[#1a1a18]/75 leading-relaxed font-medium">
+                    Monday – Saturday: 9:00 AM – 6:00 PM (IST)
                   </p>
                 </div>
               </div>
