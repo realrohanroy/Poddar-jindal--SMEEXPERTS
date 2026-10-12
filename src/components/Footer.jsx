@@ -2,8 +2,19 @@ import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { navLinks } from '../data/content'
+import { 
+  FacebookLogo, 
+  InstagramLogo, 
+  YoutubeLogo 
+} from '@phosphor-icons/react'
 
 gsap.registerPlugin(ScrollTrigger)
+
+const SOCIAL_LINKS = [
+  { name: 'Facebook', href: '#', Icon: FacebookLogo },
+  { name: 'Instagram', href: '#', Icon: InstagramLogo },
+  { name: 'YouTube', href: '#', Icon: YoutubeLogo },
+]
 
 export default function Footer() {
   const footerRef = useRef(null)
@@ -64,14 +75,14 @@ export default function Footer() {
 
             {/* Social */}
             <div className="footer-el flex gap-3">
-              {['Facebook', 'Instagram', 'YouTube'].map(social => (
+              {SOCIAL_LINKS.map(({ name, href, Icon }) => (
                 <a
-                  key={social}
-                  href="#"
-                  aria-label={social}
-                  className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white/50 hover:border-pj-gold hover:text-pj-gold transition-all duration-200 text-xs font-mono"
+                  key={name}
+                  href={href}
+                  aria-label={name}
+                  className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:border-pj-gold hover:text-pj-gold hover:bg-white/5 transition-all duration-200"
                 >
-                  {social[0]}
+                  <Icon size={18} weight="fill" />
                 </a>
               ))}
             </div>
