@@ -99,7 +99,7 @@ export default function Hero() {
 
       {/* Organic, random soft edge background overlay matching the inspiration layout */}
       <div 
-        className="hidden md:block absolute inset-0 w-full h-full z-0 pointer-events-none opacity-50" 
+        className="hidden md:block absolute inset-0 w-full h-full z-0 pointer-events-none opacity-85" 
         style={{ filter: 'blur(55px)', transform: 'translate3d(0,0,0)' }}
       >
         <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="w-full h-full text-[#FDFBF7] overflow-visible">
