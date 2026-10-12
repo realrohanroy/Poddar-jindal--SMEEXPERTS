@@ -207,6 +207,23 @@ html.lenis, html.lenis body {
   width: 100%;
 }
 
+/* Mobile trust strip marquee */
+@keyframes trust-marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-trust-marquee {
+  display: flex;
+  width: max-content;
+  animation: trust-marquee 16s linear infinite;
+  will-change: transform;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
     animation-duration: 0.01ms !important;

@@ -13,6 +13,29 @@ import {
 
 gsap.registerPlugin(ScrollTrigger)
 
+const TRUST_PILLARS = [
+  {
+    icon: '🌿',
+    title: '100% Natural',
+    desc: 'Unrefined, cold-pressed seed goodness',
+  },
+  {
+    icon: '♨️',
+    title: 'Rich Aroma & Flavour',
+    desc: 'Authentic pungent kick for Indian meals',
+  },
+  {
+    icon: '🛡️',
+    title: 'No Added Preservatives',
+    desc: 'Zero artificial chemicals, colours or argemone',
+  },
+  {
+    icon: '❤️',
+    title: 'Good for Every Kitchen',
+    desc: 'Daily cooking, tempering & deep frying',
+  },
+]
+
 export default function RetailerLocator() {
   const sectionRef = useRef(null)
   const [submitted, setSubmitted] = useState(false)
@@ -252,42 +275,41 @@ export default function RetailerLocator() {
         </div>
       </div>
 
-      {/* ── BOTTOM GREEN TRUST STRIP (EXACT DESIGN FROM INSPIRATION image copy 2.png) ── */}
-      <div className="bg-[#1a4a2e] text-white py-10 border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          
-          <div className="flex flex-col items-center gap-2">
-            <div className="w-12 h-12 rounded-full border border-white/20 bg-white/5 flex items-center justify-center text-xl text-[#F5B800]">
-              🌿
-            </div>
-            <p className="font-display font-bold text-sm">100% Natural</p>
-            <p className="text-white/60 text-[11px]">Unrefined, cold-pressed seed goodness</p>
-          </div>
+      {/* ── BOTTOM GREEN TRUST STRIP ── */}
+      <div className="bg-[#1a4a2e] text-white py-10 border-t border-white/10 overflow-hidden">
+        {/* Mobile View: Single continuous moving strip (Right to Left) */}
+        <div className="md:hidden relative w-full overflow-hidden">
+          {/* Subtle edge gradients for smooth marquee entry and exit */}
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-[#1a4a2e] to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-[#1a4a2e] to-transparent z-10" />
 
-          <div className="flex flex-col items-center gap-2">
-            <div className="w-12 h-12 rounded-full border border-white/20 bg-white/5 flex items-center justify-center text-xl text-[#F5B800]">
-              ♨️
-            </div>
-            <p className="font-display font-bold text-sm">Rich Aroma & Flavour</p>
-            <p className="text-white/60 text-[11px]">Authentic pungent kick for Indian meals</p>
+          <div className="animate-trust-marquee flex w-max">
+            {[...TRUST_PILLARS, ...TRUST_PILLARS].map((item, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col items-center text-center w-[210px] px-3 shrink-0 gap-2"
+              >
+                <div className="w-12 h-12 rounded-full border border-white/20 bg-white/5 flex items-center justify-center text-xl text-[#F5B800]">
+                  {item.icon}
+                </div>
+                <p className="font-display font-bold text-sm text-white">{item.title}</p>
+                <p className="text-white/60 text-[11px] leading-snug">{item.desc}</p>
+              </div>
+            ))}
           </div>
+        </div>
 
-          <div className="flex flex-col items-center gap-2">
-            <div className="w-12 h-12 rounded-full border border-white/20 bg-white/5 flex items-center justify-center text-xl text-[#F5B800]">
-              🛡️
+        {/* Desktop View: Unchanged 4-column grid for bigger screens */}
+        <div className="hidden md:grid max-w-7xl mx-auto px-6 md:px-12 md:grid-cols-4 gap-6 text-center">
+          {TRUST_PILLARS.map((item, idx) => (
+            <div key={idx} className="flex flex-col items-center gap-2">
+              <div className="w-12 h-12 rounded-full border border-white/20 bg-white/5 flex items-center justify-center text-xl text-[#F5B800]">
+                {item.icon}
+              </div>
+              <p className="font-display font-bold text-sm text-white">{item.title}</p>
+              <p className="text-white/60 text-[11px]">{item.desc}</p>
             </div>
-            <p className="font-display font-bold text-sm">No Added Preservatives</p>
-            <p className="text-white/60 text-[11px]">Zero artificial chemicals, colours or argemone</p>
-          </div>
-
-          <div className="flex flex-col items-center gap-2">
-            <div className="w-12 h-12 rounded-full border border-white/20 bg-white/5 flex items-center justify-center text-xl text-[#F5B800]">
-              ❤️
-            </div>
-            <p className="font-display font-bold text-sm">Good for Every Kitchen</p>
-            <p className="text-white/60 text-[11px]">Daily cooking, tempering & deep frying</p>
-          </div>
-
+          ))}
         </div>
       </div>
     </section>
