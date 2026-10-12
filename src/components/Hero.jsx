@@ -89,7 +89,7 @@ export default function Hero() {
       {/* ── FULL-BLEED BACKGROUND IMAGE ── */}
       <div
         ref={bgRef}
-        className="absolute inset-x-0 bottom-0 top-[35%] md:top-0 z-0 opacity-0 bg-[url('/images/hero-mob.png')] md:bg-[url('/images/harvest.png')] bg-cover bg-top md:bg-[center_40%]"
+        className="absolute inset-x-0 bottom-0 top-[35%] md:top-0 z-0 opacity-0 bg-[url('/images/hero-mob.png')] md:bg-[url('/images/hero-pc-new.png')] bg-cover bg-top md:bg-center"
         style={{
           willChange: 'transform',
         }}
