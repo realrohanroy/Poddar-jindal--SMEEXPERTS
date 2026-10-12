@@ -74,30 +74,30 @@ export default function ProductShowcase() {
         />
         
         {/* Absolute overlay for text and button placed above on image */}
-        <div className="absolute inset-0 pt-[3%] md:pt-[2%] lg:pt-[2.5%]">
+        <div className="absolute inset-0 pt-[3%] md:pt-[1.5%] lg:pt-[2%]">
           <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">
-            <div className="max-w-[85%] sm:max-w-[65%] md:max-w-[48%] lg:max-w-md">
+            <div className="max-w-[85%] sm:max-w-[70%] md:max-w-[520px] lg:max-w-xl xl:max-w-2xl">
               <div className="product-header inline-flex items-center gap-2 px-2.5 py-1 rounded bg-[#C59B27]/15 border border-[#C59B27]/30 text-[#1a4a2e] text-[10px] md:text-xs font-mono uppercase tracking-wider mb-2 font-semibold">
                 <span>04 / THE OIL</span>
                 <span className="w-1 h-1 rounded-full bg-[#C59B27]" />
                 <span>COMPLETE RANGE</span>
               </div>
-              <h2 className="product-header font-display font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-pj-charcoal leading-tight">
+              <h2 className="product-header font-display font-black text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl text-pj-charcoal leading-tight md:whitespace-nowrap">
                 Our Product Range
               </h2>
-              <p className="product-header hidden md:block text-pj-brown/85 text-xs sm:text-sm lg:text-base mt-2 md:mt-4 mb-4 md:mb-6 leading-relaxed">
+              <p className="product-header hidden md:block text-pj-brown/85 text-xs sm:text-sm lg:text-base mt-2 md:mt-2.5 mb-3 md:mb-5 leading-relaxed max-w-sm lg:max-w-md">
                 One mustard oil. Made for every kitchen. Poddar Jindal Mustard Oil is available in multiple pack sizes to suit your home and business needs.
               </p>
               <div className="product-header hidden md:flex flex-wrap items-center gap-2.5">
                 <a
                   href="#pack-explorer"
-                  className="inline-flex items-center justify-center gap-2 bg-[#C61A22] text-white font-semibold text-xs md:text-sm px-4 py-2 md:px-6 md:py-2.5 rounded-sm hover:bg-[#a5151c] transition-colors duration-300 shadow-md shadow-black/10"
+                  className="inline-flex items-center justify-center gap-2 bg-[#C61A22] text-white font-semibold text-xs md:text-sm px-4 py-2 md:px-5 md:py-2.5 rounded-sm hover:bg-[#a5151c] transition-colors duration-300 shadow-md shadow-black/10 shrink-0"
                 >
                   Explore Pack Sizes ↓
                 </a>
                 <a
                   href="#contact"
-                  className="hidden sm:inline-flex items-center justify-center border border-[#1a4a2e]/30 bg-white/70 backdrop-blur-xs text-[#1a4a2e] font-semibold text-xs md:text-sm px-4 py-2 md:px-5 md:py-2.5 rounded-sm hover:bg-white transition-colors duration-300"
+                  className="hidden sm:inline-flex items-center justify-center border border-[#1a4a2e]/30 bg-white/70 backdrop-blur-xs text-[#1a4a2e] font-semibold text-xs md:text-sm px-4 py-2 md:px-5 md:py-2.5 rounded-sm hover:bg-white transition-colors duration-300 shrink-0"
                 >
                   Wholesale Enquiry
                 </a>
