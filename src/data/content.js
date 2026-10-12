@@ -191,7 +191,7 @@ export const recipes = [
     description: 'The pride of Punjab — fresh mustard greens slow-simmered with bathua, garlic, and an aromatic smoking tadka of Poddar Jindal mustard oil.',
     time: '45 min',
     serves: '4-6 persons',
-    image: '/images/kitchen.png',
+    image: '/images/recipes/sarson-ka-saag.jpg',
     tip: 'Mustard oil gives the classic pungent smokiness that defines authentic saag.',
   },
   {
@@ -201,7 +201,7 @@ export const recipes = [
     description: 'Fresh carp or hilsa steaks gently simmered in a creamy yellow & black mustard paste gravy, finished with a raw drizzle of cold-pressed mustard oil.',
     time: '30 min',
     serves: '4 persons',
-    image: '/images/kitchen.png',
+    image: '/images/recipes/shorshe-maach.jpg',
     tip: 'A final tablespoon of raw mustard oil before serving brings the signature jhol aroma.',
   },
   {
@@ -211,7 +211,7 @@ export const recipes = [
     description: 'Tender cubed potatoes slow-cooked in thick stone-ground poppy seed paste, green chillies, and aromatic pure mustard oil.',
     time: '25 min',
     serves: '3-4 persons',
-    image: '/images/kitchen.png',
+    image: '/images/recipes/aloo-posto.jpg',
     tip: 'Mustard oil provides the golden hue and comforting earthy note to the poppy seeds.',
   },
   {
@@ -221,7 +221,7 @@ export const recipes = [
     description: 'Sun-dried raw mango slices infused with fenugreek, fennel, nigella seeds, and submerged in pure Poddar Jindal mustard oil for year-long preservation.',
     time: '60 min',
     serves: 'Makes 2kg',
-    image: '/images/kitchen.png',
+    image: '/images/recipes/aam-ka-achaar.jpg',
     tip: 'High antibacterial and antifungal qualities of pure mustard oil naturally preserve pickles.',
   },
   {
@@ -231,7 +231,7 @@ export const recipes = [
     description: 'Crispy flaky samosas and golden onion pakoras deep-fried at 190°C. Delivers a lighter crunch without oil greasiness thanks to our 250°C smoke point.',
     time: '35 min',
     serves: '4-6 persons',
-    image: '/images/kitchen.png',
+    image: '/images/recipes/samosa-pakora.jpg',
     tip: 'High smoke point prevents breakdown and ensures clean crispiness with low absorption.',
   },
 ]
